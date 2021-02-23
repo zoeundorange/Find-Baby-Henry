@@ -15,7 +15,7 @@ let firstFruit = 6;
 let reverseLevelUp = true;
 
 // 指定生成的水果：默认值: 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
-const minRandomFruitNum = reverseLevelUp ? 11: 5; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
+const minRandomFruitNum = reverseLevelUp ? 9: 5; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
 const maxRandomFruitNum = reverseLevelUp ? 6 : 1; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
 let setFruits = {
   // 指定前几次生成的水果，可填入任意数量的数字，0 为葡萄，9 为半个西瓜
@@ -24,6 +24,10 @@ let setFruits = {
     return minRandomFruitNum + Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum));
   }
 }
+
+//test  Random random = new Random(); 
+//         int num = random.nextInt(max)%(max-min+1) + min; 
+//         return num; 
 
 // 让水果更 Q 弹：false 改为大于 0 小于 1 的任意小数（推荐 0.9）
 let fruitQTan = 0.3;
